@@ -13,3 +13,7 @@ function Contact(content, name, email) {
   this.name = name;
   this.email = email;
 }
+
+$('.hamburger').one('click', function() {
+  $('#navContainer').append('<nav><a>About</a> <a>Projects</a> <a>Contact</a></nav>');
+});
