@@ -1,0 +1,14 @@
+/* - - H E A D E R - - */
+
+header {
+  width: 100%;
+  background: #3E6573;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0px 5px 10px #888888;
+  text-shadow: 1px 1px white,
+              2px 2px #a7c1ca,
+              3px 3px #6c93a0;
+  color: #274752;
+}
