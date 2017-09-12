@@ -1,8 +1,15 @@
 'use strict';
 
-function Projects(name, desc, filepath, id) {
-  this.name = name,
-  this.desc = desc,
-  this.filepath = filepath,
-  this.id - id;
+function Project(name, desc, img, id, url) {
+  this.name = name;
+  this.desc = desc;
+  this.img = img;
+  this.id = id;
+  this.url = url;
+}
+
+function Contact(content, name, email) {
+  this.content = content;
+  this.name = name;
+  this.email = email;
 }
