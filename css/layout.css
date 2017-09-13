@@ -2,47 +2,73 @@
 
 header {
   top: 0%;
-  position: fixed;
   margin: 0;
   width: 100%;
   background: #3E6573;
   text-align: center;
   box-shadow: 0px 5px 10px #888888;
-  opacity: .9;
 }
 
 header span {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 3em;
   text-shadow: 2px 2px #6c93a0;
-  color: #274752;
+  color: white;
 }
+
+/*- - N A V I G A T I O N - - */
 
 .hamburger {
   float: left;
   font-size: 50px;
-  color: #EB4ECA;
+  color: white;
   margin-left: 0.5em;
 }
 
+/*nav ul {
+  display: none;
+  clear: both;
+}
+
+nav:hover ul {
+  display: block;
+  clear: both;
+}*/
+
 nav {
-  position: fixed;
-  text-align: justify;
   width: 100%;
   background: black;
   color: white;
   box-shadow: 0px 5px 10px #888888;
 }
 
+
+
+/*- - A B O U T - - */
+
 .about {
+  text-align: center;
   padding: 3em;
-  margin-top: 3em;
   box-shadow: 0px 5px 10px #888888;
 }
 
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  text-shadow: 1px 1px 5px black;
+}
+
 .me {
-  text-align: center;
-  margin: 0 auto;
   height: 15em;
-  border-radius: 100%;
+  border-radius: 1em;
+}
+
+.story {
+  padding: 2em;
+  background: #EB4ECA;
+  box-shadow: inset 0 0 1em #000000;
+}
+
+p {
+  font-family: 'Poiret One', cursive;
 }
