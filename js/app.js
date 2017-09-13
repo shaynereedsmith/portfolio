@@ -37,6 +37,6 @@ function listTask(){
 
 Project.initializeTasks();
 
-$('.hamburger').one('click', function() {
-  $('#navContainer').append('<nav>About Projects Contact</nav>').addClass('.navOn')
+$('.hamburger').on('click', function() {
+  $('.nav').toggle('.hide');
 });
