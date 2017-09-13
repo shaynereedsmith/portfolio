@@ -8,7 +8,32 @@ function Project(name, desc, img, id, url) {
   this.url = url;
 }
 
+Project.prototype.render = function(){
+  var $newProject = $('#template').clone();
+  $newProject.find('h2')
+        .text(this.name);
+  $newProject.find('img')
+        .attr('src', this.img);
+  $newProject.find('.desc')
+        .text(this.desc);
+  $newProject.find('url')
+        .attr('href', this.url).text(this.name);
 
+  $('#projectsList').append($newProject);
+}
+
+Project.all = [];
+
+Project.initializeTasks = function(){
+  oldProjects.forEach(taskObj => new Project(taskObj.name, taskObj.desc, taskObj.img, taskObj.url));
+  listTask();
+}
+
+function listTask(){
+  Project.all.forEach(task => task.render());
+}
+
+Project.initializeTasks();
 
 $('.hamburger').one('click', function() {
   $('#navContainer').append('<nav>About Projects Contact</nav>').addClass('.navOn')
