@@ -6,9 +6,10 @@ function Project(name, desc, img, id, url) {
   this.img = img;
   this.id = id;
   this.url = url;
+  Project.all.push(this);
 }
 
-Project.prototype.render = function(){
+Project.prototype.render = function() {
   var $newProject = $('#template').clone();
   $newProject.find('h2')
         .text(this.name);
@@ -25,7 +26,8 @@ Project.prototype.render = function(){
 Project.all = [];
 
 Project.initializeTasks = function(){
-  oldProjects.forEach(taskObj => new Project(taskObj.name, taskObj.desc, taskObj.img, taskObj.url));
+  console.log(projects);
+  projects.forEach(taskObj => new Project(taskObj.name, taskObj.desc, taskObj.img, taskObj.url));
   listTask();
 }
 
