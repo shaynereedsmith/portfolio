@@ -18,7 +18,7 @@ Project.prototype.render = function() {
   $newProject.find('.desc')
         .text(this.desc);
   $newProject.find('url')
-        .attr('href', this.url).text(this.name);
+        .attr('href', this.url);
 
   $('#projectsList').append($newProject);
 }
