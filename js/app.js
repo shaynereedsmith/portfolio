@@ -26,7 +26,6 @@ Project.prototype.render = function() {
 Project.all = [];
 
 Project.initializeTasks = function(){
-  console.log(projects);
   projects.forEach(taskObj => new Project(taskObj.name, taskObj.desc, taskObj.img, taskObj.url));
   listTask();
 }
@@ -40,3 +39,11 @@ Project.initializeTasks();
 $('.hamburger').on('click', function() {
   $('.nav').toggle('.hide');
 });
+
+$('.aboutTab').on('click', function() {
+  $('.story').toggle('.hide');
+})
+
+$('.aboutTitle').on('click', function() {
+  $('#aboutParagraph').toggle('.hide');
+})

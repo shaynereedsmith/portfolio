@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css"/>
     <link rel="stylesheet" href="css/base.css" type="text/css"/>
     <link rel="stylesheet" href="css/layout.css" type="text/css"/>
+    <link rel="stylesheet" href="css/hero.css" type="text/css"/>
     <!-- F O N T S -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -13,21 +14,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <header>
+    <header class="heroTwo">
       <i class="fa fa-bars fa-3x hamburger" aria-hidden="true" ></i>
       <span>Shayne</span>
-      <div class="nav hide"><a href="#">About</a><a href="#">Projects</a><a href="#">Contact</a></div>
+      <div class="nav hide"><a class="aboutTab" href="#">About</a><a href="#">Projects</a><a href="#">Contact</a></div>
     </header>
-
-    <div class="aboutTitle"></div>
 
     <div class="about">
       <div class="clear-fix"></div>
       <img src="img/meIllustrated.png" class="me"/><img>
       <h2>Game developer, UX/UI designer, front-end coder, husband, father, human-person</h2>
     </div>
-    <div>
-      <p class="story">
+
+    <div id="aboutContainer" class="hero story hide">
+      <h3 class="aboutTitle">Who am I?</h3>
+      <p id="aboutParagraph" class="hide">
       My main interest and reason for being involved with technology has to do with its storytelling potential. Technology has grown so quickly and access to digital content has opened up so widely that developers worldwide are struggling to keep up with a constantly maturing and diversified user base.
       <br><br>
       I want the users of my applications to have an authentic and captivating experience that demonstrates the respect I have for their evolving sensibilities while also showcasing the innovative spirit that exists in technology.
@@ -35,7 +36,7 @@
       I am an experienced illustrator and game designer and developer. Currently a student at CodeFellows studying HTML/CSS/JavaScript.</p>
     </div>
 
-    <div id="projectsList">
+    <div id="projectsList" class="hide">
       <div id="template">
         <h2 class="name"></h2>
         <img class="img" />
