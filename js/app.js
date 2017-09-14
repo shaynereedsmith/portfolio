@@ -19,7 +19,6 @@ Project.prototype.render = function() {
         .text(this.desc);
   $newProject.find('url')
         .attr('href', this.url);
-
   $('#projectsList').append($newProject);
 }
 
@@ -37,19 +36,19 @@ function listTask(){
 Project.initializeTasks();
 
 $('.hamburger').on('click', function() {
-  $('.nav').toggle('.hide');
+  $('.nav').toggle(300);
 });
 
 $('.aboutTab').on('click', function() {
   $('#projectsList').hide();
-  $('.story').toggle('.hide');
+  $('.story').toggle(200);
 })
 
 $('.aboutTitle').on('click', function() {
-  $('#aboutParagraph').toggle('.hide');
+  $('#aboutParagraph').toggle(200);
 })
 
 $('.projectTab').on('click', function() {
   $('#aboutContainer').hide()
-  $('#projectsList').toggle('.hide');
+  $('#projectsList').toggle(200);
 })
