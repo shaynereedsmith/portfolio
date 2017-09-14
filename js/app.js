@@ -41,9 +41,15 @@ $('.hamburger').on('click', function() {
 });
 
 $('.aboutTab').on('click', function() {
+  $('#projectsList').hide();
   $('.story').toggle('.hide');
 })
 
 $('.aboutTitle').on('click', function() {
   $('#aboutParagraph').toggle('.hide');
+})
+
+$('.projectTab').on('click', function() {
+  $('#aboutContainer').hide()
+  $('#projectsList').toggle('.hide');
 })
