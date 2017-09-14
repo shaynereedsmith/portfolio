@@ -15,6 +15,11 @@ header span {
   letter-spacing: 5vw;
   font-size: 3em;
   color: #ff0000;
+  transition: color 1s;
+}
+
+header span:hover {
+  color: #4fd5d6;
 }
 
 /*- - N A V I G A T I O N - - */
@@ -24,6 +29,12 @@ header span {
   font-size: 50px;
   color: #42361e;
   margin-left: 0.5em;
+  transition: color 0.2s;
+}
+
+.hamburger:hover {
+  color: #4fd5d6;
+  cursor: pointer;
 }
 
 .hide {
@@ -40,10 +51,18 @@ header span {
 .nav a {
   font-family: 'Poiret One', cursive;
   text-decoration: none;
-  color: #4fd5d6;
+  color: #400d12;
   text-align: justify;
   margin: 1em;
   font-size: 1.5em;
+  transition: padding 0.5s;
+}
+
+.nav a:hover {
+  color: white;
+  background-color: gray;
+  border-radius: 8px 8px 0px 0px;
+  padding: 0 0.5em;
 }
 
 /*- - A B O U T - - */
@@ -57,11 +76,11 @@ header span {
 h2 {
   font-family: 'Amatic SC', cursive;
   font-size: 2em;
-  text-shadow: 1px 1px 5px black;
+  text-shadow: 1px 1px 5px black,;
 }
 
 .me {
-  height: 15em;
+  height: 50vw;
   border-radius: 1em;
 }
 
@@ -82,7 +101,6 @@ h3 {
   letter-spacing: 5vw;
   font-size: 3em;
   color: #ff0000;
-
   border-radius: 0.5em;
   transition: color 1s, background-color 0.5s, border 0.5s;
 }
@@ -91,23 +109,24 @@ h3:hover {
   cursor: pointer;
   background-color: #ff0000;
   color: #cdffff;
-  border: 1px solid #ff0000;
-  border-collapse: collapse;
   box-shadow: 0px 0px 10px black;
 }
 
 /*- - - F O O T E R - - - */
 
 footer {
+  margin: 2em 0;
   text-align: center;
 }
 
 footer a {
+  padding-top: 2em;
   text-decoration: none;
   color: #4fd5d6;
-  transition: color 0.5s;
+  transition: color 0.5s, text-shadow 0.5s;
 }
 
 footer a:hover {
   color: #ff0000;
+  text-shadow: 1px 1px 5px gray;
 }
