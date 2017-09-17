@@ -41,6 +41,8 @@ function listProjects(){
 
 Project.initializeTasks();
 
+// NAVIGATION
+
 $('.hamburger').on('click', function(event) {
   event.preventDefault();
   $('.nav').toggle(300);
@@ -62,3 +64,21 @@ $('.projectTab').on('click', function(event) {
   $('#aboutContainer').hide();
   $('#projectList').toggle(200);
 });
+
+// PROJECTS
+
+$('.projectSubContainer').on('click', function(event){
+  var $overlay = this.children[1];
+  var temp = $('#'+ $overlay.id);
+  temp.animate({
+    height: 'toggle',
+  });
+});
+
+// $('.projectSubContainer')
+//   .mouseenter(function() {
+//     $('p').removeClass('hide');
+//   })
+//   .mouseleave(function() {
+//     $('p').addClass('hide');
+//   });

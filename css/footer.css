@@ -1,0 +1,22 @@
+/*- - - F O O T E R - - - */
+
+footer {
+  margin: 2em 0;
+  text-align: center;
+}
+
+footer a {
+  padding-top: 2em;
+  text-decoration: none;
+  color: #4fd5d6;
+  transition: color 0.5s, text-shadow 0.5s;
+}
+
+footer a:hover {
+  color: #ff0000;
+  text-shadow: 1px 1px 5px gray;
+}
+
+footer p {
+  font-size: 250%;
+}

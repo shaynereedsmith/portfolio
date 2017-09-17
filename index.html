@@ -3,12 +3,14 @@
   <head>
     <title>Shayne Smith: Portfolio</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/reset.css" type="text/css"/>
+    <!-- <link rel="stylesheet" href="css/reset.css" type="text/css"/> -->
     <link rel="stylesheet" href="css/base.css" type="text/css"/>
     <link rel="stylesheet" href="css/layout.css" type="text/css"/>
     <link rel="stylesheet" href="css/hero.css" type="text/css"/>
     <link rel="stylesheet" href="css/header.css" type="text/css"/>
     <link rel="stylesheet" href="css/nav.css" type="text/css"/>
+    <link rel="stylesheet" href="css/projects.css" type="text/css"/>
+    <link rel="stylesheet" href="css/footer.css" type="text/css"/>
     <!-- F O N T S -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -16,28 +18,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script id="project-template" type="text/x-handlebars-template">
-      <div>
-        <h2 class="name">{{ name }}</h2>
-        <img src="{{ img }}" />
-        <p class="desc">{{{ desc }}}</p>
-        <a href="{{ url }}"></a>
+      <div class="projectsContainer">
+        <section class="projectSubContainer heroThree">
+          <img src="{{ img }}" />
+          <p id="{{ id }}" class="overlay">{{ name }}<br><br>{{{ desc }}}<br><br><a href="{{ url }}" class="projectButton">Click!<a></p>
+        </section>
+        <br><br>
       </div>
     </script>
 
   </head>
-  <body class="Site">
+  <body>
     <header class="heroTwo">
-      <i class="fa fa-bars fa-3x hamburger" aria-hidden="true" ></i>
+      <i class="fa fa-bars fa-5x hamburger" aria-hidden="true" ></i>
       <span>Shayne</span>
       <div class="nav hide"><a class="aboutTab" href="#">About</a><a class="projectTab" href="#">Projects</a><a class="contactTab" href="#">Contact</a></div>
     </header>
-    <main class="Site-content">
-      <div class="about">
-        <div class="clear-fix"></div>
-        <img src="img/meIllustrated.png" class="me"/><img>
 
-        <h2>Game developer, UX/UI designer, front-end coder, husband, father, human-person</h2>
-      </div>
+    <main class="Site-content">
+      <img src="img/meIllustrated.png" class="me"/>
+      <h2 class="heroFour">Game developer, UX/UI designer, front-end coder, husband, father, human-person</h2>
 
       <div id="aboutContainer" class="hero story hide">
         <h3 class="aboutTitle">Who am I?</h3>
