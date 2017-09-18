@@ -74,11 +74,3 @@ $('.projectSubContainer').on('click', function(event){
     height: 'toggle',
   });
 });
-
-// $('.projectSubContainer')
-//   .mouseenter(function() {
-//     $('p').removeClass('hide');
-//   })
-//   .mouseleave(function() {
-//     $('p').addClass('hide');
-//   });

@@ -19,7 +19,7 @@
 
     <script id="project-template" type="text/x-handlebars-template">
       <div class="projectsContainer">
-        <section class="projectSubContainer heroThree">
+        <section class="projectSubContainer">
           <img src="{{ img }}" />
           <p id="{{ id }}" class="overlay">{{ name }}<br><br>{{{ desc }}}<br><br><a href="{{ url }}" class="projectButton">Click!<a></p>
         </section>
@@ -37,9 +37,14 @@
 
     <main class="Site-content">
       <img src="img/meIllustrated.png" class="me"/>
-      <h2 class="heroFour">Game developer, UX/UI designer, front-end coder, husband, father, human-person</h2>
+      <div class="subTitle">
+        <h2>Game developer, UX/UI designer, front-end coder</h2>
+      </div>
+      <div class="sepperator heroFour">
+        <p>Husband, father, human-person</p>
+      </div>
 
-      <div id="aboutContainer" class="hero story hide">
+      <div id="aboutContainer" class="story heroTwo hide">
         <h3 class="aboutTitle">Who am I?</h3>
         <p id="aboutParagraph" class="hide">
         Hello, there. My name is Shayne.
