@@ -1,3 +1,23 @@
 .clear-fix {
   clear: both;
 }
+
+/*.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}*/
+
+.hide {
+  display: none;
+  clear: both;
+}
+
+.show {
+  display: block;
+  clear: both;
+}
