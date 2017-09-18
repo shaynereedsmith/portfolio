@@ -4,6 +4,11 @@ body {
   margin: 0;
 }
 
+#aboutContainer p {
+  margin: 0.5em 0em;
+  font-size: 200%;
+}
+
 .Site-content {
 
 }
