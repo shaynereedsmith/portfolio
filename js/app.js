@@ -2,6 +2,20 @@
 
 Project.all = [];
 
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.all = JSON.parse(localStorage.rawData);
+    Project.initializeTasks();
+  } else {
+    $.get('/data/projects.json')
+      .then(function(response) {
+        localStorage.setItem('rawData', JSON.stringify(response));
+        Project.all = response;
+        Project.initializeTasks();
+      })
+  }
+}
+
 function Project(project) {
   this.name = project.name;
   this.desc = project.desc;
@@ -13,64 +27,23 @@ function Project(project) {
 
 Project.prototype.render = function() {
 
-  var sourceHTML = $('#project-template').html();
-  var compileProject = Handlebars.compile(sourceHTML);
-  var myProjects = {
+  let sourceHTML = $('#project-template').html();
+  let compileProject = Handlebars.compile(sourceHTML);
+  let myProjects = {
     name: this.name,
     desc: this.desc,
     img: this.img,
     id: this.id,
     url: this.url,
   }
-  var newRawHTML = compileProject(myProjects);
+  let newRawHTML = compileProject(myProjects);
   $('#projectList').append(newRawHTML);
 }
 
 Project.initializeTasks = function(){
-  projects.forEach(project => {
-    new Project(project);
-  });
-  listProjects();
-}
-
-function listProjects(){
   Project.all.forEach(project => {
-    project.render();
+    new Project(project).render();
   });
 }
 
-Project.initializeTasks();
-
-// NAVIGATION
-
-$('.hamburger').on('click', function(event) {
-  event.preventDefault();
-  $('.nav').toggle(300);
-});
-
-$('.aboutTab').on('click', function(event) {
-  event.preventDefault();
-  $('#projectList').hide();
-  $('.story').toggle(200);
-})
-
-$('.aboutTitle').on('click', function(event) {
-  event.preventDefault();
-  $('#aboutParagraph').toggle(200);
-})
-
-$('.projectTab').on('click', function(event) {
-  event.preventDefault();
-  $('#aboutContainer').hide();
-  $('#projectList').toggle(200);
-});
-
-// PROJECTS
-
-$('.projectSubContainer').on('click', function(event){
-  var $overlay = this.children[1];
-  var temp = $('#'+ $overlay.id);
-  temp.animate({
-    height: 'toggle',
-  });
-});
+Project.fetchAll();
