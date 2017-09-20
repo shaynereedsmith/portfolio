@@ -22,6 +22,7 @@ function Project(project) {
   this.img = project.img;
   this.id = project.id;
   this.url = project.url;
+  this.icon = project.icon;
   Project.all.push(this);
 }
 
@@ -35,6 +36,7 @@ Project.prototype.render = function() {
     img: this.img,
     id: this.id,
     url: this.url,
+    icon: this.icon
   }
   let newRawHTML = compileProject(myProjects);
   $('#projectList').append(newRawHTML);

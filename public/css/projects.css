@@ -23,11 +23,13 @@
   font-family: 'Poiret One', cursive;
   text-decoration: none;
   color: #fff172;
-  padding: 0.1em;
+  padding: 0.5em;
   font-size: 100%;
   transition: all 0.5s;
-  border-radius: 15px;
-  background-color: #ff0000;
+  border-radius: 5px;
+  background-color: #36a3eb;
+  display: block;
+  margin: 1em;
 }
 
 .projectButton:hover {
@@ -51,6 +53,12 @@
   background-color: #cc435f;
   opacity: 0.95;
   width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ef017c+0,ff5db1+100 */
+  background: #ef017c; /* Old browsers */
+  background: -moz-linear-gradient(top, #ef017c 0%, #ff5db1 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ef017c 0%,#ff5db1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ef017c 0%,#ff5db1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef017c', endColorstr='#ff5db1',GradientType=0 ); /* IE6-9 */
 }
 
 .overlay p {
@@ -59,6 +67,11 @@
 
 .img > img {
   display: block;
+}
+
+.icon {
+  padding-right: 1em;
+  float: right;
 }
 
 @media all and (min-width: 600px) {
