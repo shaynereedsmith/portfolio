@@ -2,6 +2,12 @@
 
 // NAVIGATION
 
+$(window).resize(function() {
+  if ($(window).width() > 600){
+    $('.nav').show();
+  }
+});
+
 $('.hamburger').on('click', function(event) {
   event.preventDefault();
   $('.nav').toggle(300);
@@ -26,10 +32,9 @@ $('.projectTab').on('click', function(event) {
 
 // PROJECTS
 
-$('.projectSubContainer').on('click', function(event){
-  const $overlay = this.children[1];
-  const temp = $('#'+ $overlay.id);
-  temp.animate({
-    height: 'toggle',
-  });
+$('#projectList').on('click', '.projectSubContainer', function(event){
+  $(this).find('.overlay')
+          .animate({
+            height: 'toggle',
+          });
 });

@@ -3,6 +3,7 @@
   <head>
     <title>Shayne Smith: Portfolio</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="css/reset.css" type="text/css"/> -->
     <link rel="stylesheet" href="css/base.css" type="text/css"/>
     <link rel="stylesheet" href="css/layout.css" type="text/css"/>
@@ -21,7 +22,7 @@
       <div class="projectsContainer">
         <section class="projectSubContainer">
           <img src="{{ img }}" />
-          <p id="{{ id }}" class="overlay">{{ name }}<br><br>{{{ desc }}}<br><br><a target="_blank" href="{{ url }}" class="projectButton">Click!<a></p>
+          <p id="{{ id }}" class="overlay">{{ name }}<br><br>{{{ desc }}}<a target="_blank" href="{{ url }}" class="projectButton">Click!<a></p>
         </section>
         <br><br>
       </div>
@@ -30,12 +31,13 @@
   </head>
   <body>
     <header class="heroTwo">
-      <i class="fa fa-bars fa-5x hamburger" aria-hidden="true" ></i>
+      <i class="fa fa-bars fa-2x hamburger" aria-hidden="true" ></i>
       <span>Shayne</span>
       <div class="nav hide"><a class="aboutTab" href="#">About</a><a class="projectTab" href="#">Projects</a><a class="contactTab" href="#">Contact</a></div>
     </header>
 
-    <main class="Site-content">
+
+    <main class="Site-content heroTwo">
       <img src="img/meIllustrated.png" class="me"/>
       <div class="subTitle">
         <h2>Game developer, UX/UI designer, front-end coder</h2>
@@ -44,7 +46,7 @@
         <p>Husband, father, human-person</p>
       </div>
 
-      <div id="aboutContainer" class="story heroTwo hide">
+      <div id="aboutContainer" class="story hide">
         <h3 class="aboutTitle">Who am I?</h3>
         <section id="aboutParagraph" class="hide">
         <p>
