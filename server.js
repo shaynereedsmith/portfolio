@@ -1,17 +1,22 @@
 'use strict';
 
-let express = require('express');
-let app = express();
-const bodyParser = require('body-parser').urlencoded({extended: true});
+const EXPRESS = require('express');
+// const PG = require('pg');
+const BODYPARSER = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
+const APP = EXPRESS();
 
-app.use(express.static('public'));
+APP.use(EXPRESS.static('public'));
 
-app.post('/articles', bodyParser, function(request, response) {
+APP.get('/', function(request, response){
+  response.sendFile('index.html', {root: './public'})
+})
+
+APP.post('/articles', BODYPARSER, function(request, response) {
   console.log(request.body);
   response.send('Record posted to server!!');
 })
 
-app.listen(PORT, function() {
+APP.listen(PORT, function() {
   console.log(PORT);
 });
