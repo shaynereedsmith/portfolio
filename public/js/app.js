@@ -30,9 +30,7 @@ function Project(project) {
 
   Project.prototype.render = function() {
 
-    let sourceHTML = $('#project-template').html();
-    let compileProject = Handlebars.compile(sourceHTML);
-    let myProjects = {
+    let projectDictionary = {
       name: this.name,
       desc: this.desc,
       img: this.img,
@@ -40,7 +38,9 @@ function Project(project) {
       url: this.url,
       icon: this.icon
     }
-    let newRawHTML = compileProject(myProjects);
+    let sourceHTML = $('#project-template').html();
+    let compileProject = Handlebars.compile(sourceHTML);
+    let newRawHTML = compileProject(projectDictionary);
     $('#projectList').append(newRawHTML);
   }
 
@@ -51,5 +51,15 @@ function Project(project) {
   }
 
   fetchAll();
-
+  let projectNames = Project.all.map(function(project){
+    return project.name;
+  })
+  let projectName = projectNames.reduce(function(sum, title){
+    return sum + ', ';
+  });
+  let projectMetadata = {projectsNumber:projectName};
+  let sourceHTML = $('#project-number-template').html();
+  let compileProject = Handlebars.compile(sourceHTML);
+  let newRawHTML = compileProject(projectMetadata);
+  $('#project-metadata').append(newRawHTML);
 })();
