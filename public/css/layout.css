@@ -6,11 +6,12 @@ body {
 
 #aboutContainer p {
   margin: 0.5em 0em;
-  font-size: 200%;
+  font-size: 100%;
+  text-align: left;
 }
 
 .Site-content {
-
+  text-align: center;
 }
 
 .about {
@@ -25,12 +26,13 @@ body {
   width: 100%;
   color: white;
   margin: 0;
+  text-align: center;
 }
 
 h2 {
   color: black;
   margin: 0;
-  font-size: 400%;
+  font-size: 200%;
   padding: 1em;
 }
 
@@ -54,7 +56,7 @@ h3 {
   font-family: 'Open Sans Condensed', sans-serif;
   text-transform: uppercase;
   letter-spacing: 5vw;
-  font-size: 3em;
+  font-size: 2em;
   color: #ff0000;
   border-radius: 0.5em;
   transition: color 1s, background-color 0.5s, border 0.5s;
@@ -68,16 +70,30 @@ h3:hover {
 }
 
 .sepperator {
-  height: 10em;
-  padding-bottom: 2em;
   margin: 0;
   border-bottom: 10px dashed black;
 }
 
 .sepperator p {
   text-align: center;
-  font-size: 300%;
+  font-size: 150%;
   margin: 0;
   padding: 1em;
   color: white;
+  font-weight: bold;
+}
+
+@media all and (min-width: 600px) {
+  .me {
+    width: 50%;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #888888;
+  }
+
+  #aboutContainer {
+    margin: auto;
+    margin-top: 2em;
+    width: 60%;
+  }
 }

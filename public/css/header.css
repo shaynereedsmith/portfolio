@@ -16,11 +16,19 @@ header span {
   font-family: 'Open Sans Condensed', sans-serif;
   text-transform: uppercase;
   letter-spacing: 5vw;
-  font-size: 500%;
+  font-size: 200%;
   color: #ff0000;
   transition: color 1s;
 }
 
 header span:hover {
   color: #4fd5d6;
+}
+
+@media all and (min-width: 600px) {
+  header span {
+    font-size: 2em;
+    float: left;
+    padding-left: 1em;
+  }
 }

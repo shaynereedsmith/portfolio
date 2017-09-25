@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio project for CodeFellows 301.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaynereedsmith/portfolio.git"
+  },
+  "author": "Shayne Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shaynereedsmith/portfolio/issues"
+  },
+  "homepage": "https://github.com/shaynereedsmith/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}

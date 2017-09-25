@@ -3,6 +3,7 @@
   <head>
     <title>Shayne Smith: Portfolio</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="css/reset.css" type="text/css"/> -->
     <link rel="stylesheet" href="css/base.css" type="text/css"/>
     <link rel="stylesheet" href="css/layout.css" type="text/css"/>
@@ -16,12 +17,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <script src="https://use.fontawesome.com/021f7366b5.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="img/meIllustrated.png" rel="icon" type="image/x-icon" />
 
     <script id="project-template" type="text/x-handlebars-template">
       <div class="projectsContainer">
         <section class="projectSubContainer">
           <img src="{{ img }}" />
-          <p id="{{ id }}" class="overlay">{{ name }}<br><br>{{{ desc }}}<br><br><a href="{{ url }}" class="projectButton">Click!<a></p>
+          <p id="{{ id }}" class="overlay">{{ name }}<br><br>{{{ desc }}}<a target="_blank" href="{{ url }}" class="projectButton"> {{{ icon }}} Click!<a></p>
         </section>
         <br><br>
       </div>
@@ -30,10 +32,11 @@
   </head>
   <body>
     <header class="heroTwo">
-      <i class="fa fa-bars fa-5x hamburger" aria-hidden="true" ></i>
-      <span>Shayne</span>
+      <i class="fa fa-bars fa-2x hamburger" aria-hidden="true" ></i>
+      <span></i>Shayne</i></span>
       <div class="nav hide"><a class="aboutTab" href="#">About</a><a class="projectTab" href="#">Projects</a><a class="contactTab" href="#">Contact</a></div>
     </header>
+
 
     <main class="Site-content">
       <img src="img/meIllustrated.png" class="me"/>
@@ -44,7 +47,7 @@
         <p>Husband, father, human-person</p>
       </div>
 
-      <div id="aboutContainer" class="story heroTwo hide">
+      <div id="aboutContainer" class="story hide">
         <h3 class="aboutTitle">Who am I?</h3>
         <section id="aboutParagraph" class="hide">
         <p>
@@ -70,11 +73,13 @@
       </main>
     <footer>
       <p>Follow me here</p>
-      <a href="https://www.linkedin.com/in/shayne-smith-44153734/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
-      <a href="https://github.com/shaynereedsmith"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+      <a target="_blank" href="https://www.coinbase.com/join/56919bf2ec721f79a6000170"><i class="fa fa-btc fa-3x" aria-hidden="true"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/shayne-smith-44153734/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+      <a target="_blank" href="https://github.com/shaynereedsmith"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
     </footer>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
   <script src="data/projects.js" type="text/javascript" ></script>
   <script src="js/app.js" type="text/javascript" ></script>
+  <script src="js/onClick.js" type="text/javascript" ></script>
 </html>
