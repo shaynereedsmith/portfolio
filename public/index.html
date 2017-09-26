@@ -19,6 +19,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="img/meIllustrated.png" rel="icon" type="image/x-icon" />
 
+    <script id="project-number-template" type="text/x-handlebars-template">
+      <div id="project-number">Check out my projects: {{ projectsNumber }}</div>
+    </script>
+
     <script id="project-template" type="text/x-handlebars-template">
       <div class="projectsContainer">
         <section class="projectSubContainer">
@@ -68,6 +72,7 @@
         </section>
       </div>
 
+      <div id="project-metadata" class="hide"></div>
       <div id="projectList" class="hide"></div>
 
       </main>
