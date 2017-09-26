@@ -16,6 +16,7 @@ $('.hamburger').on('click', function(event) {
 $('.aboutTab').on('click', function(event) {
   event.preventDefault();
   $('#projectList').hide();
+  $('#project-metadata').hide();
   $('.story').toggle(200);
 })
 
@@ -28,6 +29,7 @@ $('.projectTab').on('click', function(event) {
   event.preventDefault();
   $('#aboutContainer').hide();
   $('#projectList').toggle(200);
+  $('#project-metadata').toggle(200);
 });
 
 // PROJECTS

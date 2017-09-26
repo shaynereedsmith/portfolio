@@ -1,33 +1,23 @@
 'use strict';
-
-Project.all = [];
-
-function Project(project) {
-  this.name = project.name;
-  this.desc = project.desc;
-  this.img = project.img;
-  this.id = project.id;
-  this.url = project.url;
-  this.icon = project.icon;
-}
+var app = app || {};
 
 (function(module){
 
   let fetchAll = function() {
     if (localStorage.rawData) {
-      Project.all = JSON.parse(localStorage.rawData);
+      module.all = JSON.parse(localStorage.rawData);
       initializeTasks();
     } else {
       $.get('/data/projects.json')
         .then(function(response) {
           localStorage.setItem('rawData', JSON.stringify(response));
-          Project.all = response;
+          module.all = response;
           initializeTasks();
         })
     }
   }
 
-  Project.prototype.render = function() {
+  module.prototype.render = function() {
 
     let projectDictionary = {
       name: this.name,
@@ -44,14 +34,14 @@ function Project(project) {
   }
 
   let initializeTasks = function(){
-    Project.all.forEach(project => {
+    module.all.forEach(project => {
       new Project(project).render();
     });
   }
 
   fetchAll();
 
-  let projectNames = Project.all.map(function(project){
+  let projectNames = module.all.map(function(project){
     return project.name;
   })
   let projectName = projectNames.reduce(function(sum, title){
