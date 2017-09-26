@@ -9,7 +9,6 @@ function Project(project) {
   this.id = project.id;
   this.url = project.url;
   this.icon = project.icon;
-  Project.all.push(this);
 }
 
 (function(module){
@@ -51,11 +50,12 @@ function Project(project) {
   }
 
   fetchAll();
+
   let projectNames = Project.all.map(function(project){
     return project.name;
   })
   let projectName = projectNames.reduce(function(sum, title){
-    return sum + ', ';
+    return `${sum}, ${title}`;
   });
   let projectMetadata = {projectsNumber:projectName};
   let sourceHTML = $('#project-number-template').html();
