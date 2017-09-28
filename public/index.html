@@ -33,12 +33,27 @@
       </div>
     </script>
 
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{ name }}</h3>
+        </a>
+        <p>Description: {{ description }}</p>
+        <p>Language: {{ language }}</p>
+        <p>Created: {{ created_at }}</p>
+        <p>Last updated: {{ updated_at }}</p>
+        {{#if watchers_count}}
+          <p>{{ watchers_count }} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
+
   </head>
   <body>
     <header class="heroTwo">
       <i class="fa fa-bars fa-2x hamburger" aria-hidden="true" ></i>
       <span></i>Shayne</i></span>
-      <div class="nav hide"><a class="aboutTab" href="/about">About</a><a class="projectTab" href="/projects">Projects</a><a class="contactTab" href="#">Contact</a></div>
+      <div class="nav hide"><a class="aboutTab" href="/about">About</a><a class="projectTab" href="/projects">Projects</a><a class="contactTab" href="/repo">Repos</a></div>
     </header>
 
 
