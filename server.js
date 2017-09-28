@@ -12,9 +12,13 @@ APP.get('/', function(request, response){
   response.sendFile('index.html', {root: './public'})
 })
 
-APP.post('/articles', BODYPARSER, function(request, response) {
+APP.post('/projects', BODYPARSER, function(request, response) {
   console.log(request.body);
   response.send('Record posted to server!!');
+})
+
+APP.get('*', function(request, response){
+  response.sendFile('index.html', {root: './public'})
 })
 
 APP.listen(PORT, function() {

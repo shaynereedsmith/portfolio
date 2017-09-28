@@ -1,7 +1,20 @@
 'use strict';
 var app = app || {};
 
+
+
 (function(module){
+
+  Project.all = [];
+
+  function Project(project) {
+    this.name = project.name;
+    this.desc = project.desc;
+    this.img = project.img;
+    this.id = project.id;
+    this.url = project.url;
+    this.icon = project.icon;
+  }
 
   let fetchAll = function() {
     if (localStorage.rawData) {
@@ -17,7 +30,7 @@ var app = app || {};
     }
   }
 
-  module.prototype.render = function() {
+  Project.prototype.render = function() {
 
     let projectDictionary = {
       name: this.name,
@@ -52,4 +65,5 @@ var app = app || {};
   let compileProject = Handlebars.compile(sourceHTML);
   let newRawHTML = compileProject(projectMetadata);
   $('#project-metadata').append(newRawHTML);
-})();
+
+})(app);

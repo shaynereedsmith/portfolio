@@ -1,4 +1,4 @@
 'use strict';
 var app = app || {};
 
-// Put some shit here
+// don't need this

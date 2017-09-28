@@ -38,7 +38,7 @@
     <header class="heroTwo">
       <i class="fa fa-bars fa-2x hamburger" aria-hidden="true" ></i>
       <span></i>Shayne</i></span>
-      <div class="nav hide"><a class="aboutTab" href="#">About</a><a class="projectTab" href="#">Projects</a><a class="contactTab" href="#">Contact</a></div>
+      <div class="nav hide"><a class="aboutTab" href="/about">About</a><a class="projectTab" href="/projects">Projects</a><a class="contactTab" href="#">Contact</a></div>
     </header>
 
 
@@ -86,7 +86,13 @@
 
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
-  <script src="data/projects.js" type="text/javascript" ></script>
-  <script src="js/app.js" type="text/javascript" ></script>
-  <script src="js/onClick.js" type="text/javascript" ></script>
+  <!-- <script src="js/app.js" type="text/javascript" ></script> -->
+  <script src="/scripts/controllers/projectsController.js"></script>
+  <script src="/scripts/controllers/aboutController.js"></script>
+  <script src="/scripts/models/projects.js"></script>
+  <script src="/scripts/views/projectView.js"></script>
+  <script src="/scripts/controllers/routes.js"></script>
+
+  <!-- <script src="data/projects.js" type="text/javascript" ></script> -->
+  <script src="/js/onClick.js" type="text/javascript" ></script>
 </html>
