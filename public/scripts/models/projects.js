@@ -50,20 +50,23 @@ var app = app || {};
     module.all.forEach(project => {
       new Project(project).render();
     });
+    renderProjectNames();
   }
 
   fetchAll();
 
-  let projectNames = module.all.map(function(project){
-    return project.name;
-  })
-  let projectName = projectNames.reduce(function(sum, title){
-    return `${sum}, ${title}`;
-  });
-  let projectMetadata = {projectsNumber:projectName};
-  let sourceHTML = $('#project-number-template').html();
-  let compileProject = Handlebars.compile(sourceHTML);
-  let newRawHTML = compileProject(projectMetadata);
-  $('#project-metadata').append(newRawHTML);
+  function renderProjectNames(){
+    let projectNames = module.all.map(function(project){
+      return project.name;
+    })
+    let projectName = projectNames.reduce(function(sum, title){
+      return `${sum}, ${title}`;
+    });
+    let projectMetadata = {projectsNumber:projectName};
+    let sourceHTML = $('#project-number-template').html();
+    let compileProject = Handlebars.compile(sourceHTML);
+    let newRawHTML = compileProject(projectMetadata);
+    $('#project-metadata').append(newRawHTML);
+  }
 
 })(app);

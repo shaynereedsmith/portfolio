@@ -8,7 +8,7 @@ var app = app || {};
 
   repos.requestRepos = function(callback) {
 
-    $.get('/github/user/repos', function(data){
+    $.get('/github/user/repos', function(data) {
       data.map(ele => {
         repos.all.push(ele);
       })
