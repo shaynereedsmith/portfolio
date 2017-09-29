@@ -5,17 +5,17 @@ var app = app || {};
   const projectsController = {};
 
   projectsController.displayProjects = function (){
+    $('#repos').hide();
     $('#aboutContainer').hide();
     $('#projectList').toggle(200);
     $('#project-metadata').toggle(200);
 
-    $('#projectList').on('click', '.projectSubContainer', function(event){
+    $('#projectList').off('click').on('click', '.projectSubContainer', function(event){
       $(this).find('.overlay')
               .animate({
                 height: 'toggle',
               });
     });
-
   }
 
   module.projectsController = projectsController;

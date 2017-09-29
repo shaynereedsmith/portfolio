@@ -9,6 +9,7 @@ var app = app || {};
       event.preventDefault();
       $('#aboutParagraph').toggle(200);
     })
+    $('#repos').hide();
     $('#aboutParagraph').hide();
     $('#projectList').hide();
     $('.story').toggle(200);
