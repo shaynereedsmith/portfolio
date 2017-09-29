@@ -74,6 +74,15 @@
   float: right;
 }
 
+#project-metadata {
+  background-color: #72847f;
+}
+
+#project-metadata h2 {
+  font-family: 'Poiret One', cursive;
+  color: #9ad8c6;
+}
+
 @media all and (min-width: 600px) {
   .projectsContainer {
     width: calc(100vw/3);
