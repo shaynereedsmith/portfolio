@@ -5,5 +5,4 @@ page('/');
 page('/about', app.aboutController.displayAbout);
 page('/projects', app.projectsController.displayProjects);
 page('/repo', app.repoView.index);
-// page(`/repo`, app.repoView.repoView);
 page();
