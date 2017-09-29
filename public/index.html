@@ -4,7 +4,6 @@
     <title>Shayne Smith: Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/reset.css" type="text/css"/> -->
     <link rel="stylesheet" href="css/base.css" type="text/css"/>
     <link rel="stylesheet" href="css/layout.css" type="text/css"/>
     <link rel="stylesheet" href="css/hero.css" type="text/css"/>
@@ -19,6 +18,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="img/meIllustrated.png" rel="icon" type="image/x-icon" />
 
+    <script id="project-number-template" type="text/x-handlebars-template">
+      <div id="project-number"><h2>Check out my projects:</h2><br> {{ projectsNumber }}</div>
+    </script>
+
     <script id="project-template" type="text/x-handlebars-template">
       <div class="projectsContainer">
         <section class="projectSubContainer">
@@ -29,12 +32,27 @@
       </div>
     </script>
 
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{ name }}</h3>
+        </a>
+        <p>Description: {{ description }}</p>
+        <p>Language: {{ language }}</p>
+        <p>Created: {{ created_at }}</p>
+        <p>Last updated: {{ updated_at }}</p>
+        {{#if watchers_count}}
+          <p>{{ watchers_count }} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
+
   </head>
   <body>
     <header class="heroTwo">
       <i class="fa fa-bars fa-2x hamburger" aria-hidden="true" ></i>
       <span></i>Shayne</i></span>
-      <div class="nav hide"><a class="aboutTab" href="#">About</a><a class="projectTab" href="#">Projects</a><a class="contactTab" href="#">Contact</a></div>
+      <div class="nav hide"><a class="aboutTab" href="/about">About</a><a class="projectTab" href="/projects">Projects</a><a class="contactTab" href="/repo">Repos</a></div>
     </header>
 
 
@@ -51,22 +69,25 @@
         <h3 class="aboutTitle">Who am I?</h3>
         <section id="aboutParagraph" class="hide">
         <p>
-        Hello, there. My name is Shayne.
+        Hello, there. My name is Shayne, and I am a human person.
         </p>
         <p>
-        The storytelling potential that rests within software applications is immense. That’s what interests me about web development.
+        Code is cool. It can do many things. I have done a few things with code. You can find some of those things here.
         </p>
         <p>
-        Technology has grown so quickly and access to digital content has opened up so widely that developers worldwide are struggling to keep up with a constantly maturing and diversified user base.
+        As far as proficiency -- if you're interested in knowing that sort of thing about me -- I tend towards front-end, design, and user experience. And that's really what I enjoy about working with code.
         </p>
         <p>
-        I want the users of my applications to have an authentic and captivating experience that demonstrates the respect I have for their evolving sensibilities while also showcasing the innovative spirit that exists in technology.
+        Code and software development is a unique medium and can be used to tell stories in a unique way -- because you have to interact with it. Good design with quality UX can turn something as boring sounding as traversing a blog into a memorable or even artistic experience.
         </p>
         <p>
         I am an experienced illustrator, game designer, and developer. Currently a student at CodeFellows studying HTML/CSS/JavaScript.
         </p>
         </section>
       </div>
+      <ul id="repos"></ul>
+
+      <div id="project-metadata" class="hide"></div>
 
       <div id="projectList" class="hide"></div>
 
@@ -78,8 +99,14 @@
       <a target="_blank" href="https://github.com/shaynereedsmith"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
     </footer>
   </body>
+
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
-  <script src="data/projects.js" type="text/javascript" ></script>
-  <script src="js/app.js" type="text/javascript" ></script>
-  <script src="js/onClick.js" type="text/javascript" ></script>
+  <script src="/scripts/controllers/aboutController.js"></script>
+  <script src="/scripts/controllers/projectsController.js"></script>
+  <script src="/scripts/controllers/repoControllers.js"></script>
+  <script src="/scripts/controllers/routes.js"></script>
+  <script src="/scripts/models/projects.js"></script>
+  <script src="/scripts/models/repo.js"></script>
+  <script src="/scripts/models/onClick.js" type="text/javascript" ></script>
 </html>
